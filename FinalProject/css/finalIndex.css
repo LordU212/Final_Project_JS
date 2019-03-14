@@ -1,0 +1,68 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16pt;
+    background-image: url(../media/background.jpeg);
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+footer p{
+    background: rgb(116, 99, 91);
+    width: 100%;
+
+    font-size: 1em;
+}
+article{
+    display: flex;
+    flex-direction:column;
+    height:700px;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+section{
+    flex:1;
+    padding: 2%;
+    min-width: 2%;
+    max-width:100%;
+    min-height: 40%;
+}
+p{
+    font-size: 1.8em;
+}
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22pt;
+    color: rgb(255, 255, 255);
+    text-shadow: 2pt;
+    text-align: center;
+}
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 30pt;
+    text-shadow: 1pt;
+    width: 10%;
+    background-color: none;
+    padding: .5%;
+    opacity: none;
+    border-radius: 2px;
+}
+
+nav p a{
+    
+    float: center;
+    color: rgb(32, 227, 253);
+    position: relative;
+    min-width: 8em;
+    display: block;
+    text-align: center;
+    border: 3px solid #000000;
+}
+
+nav p:hover a {
+    color: rgb(10, 175, 161);
+    text-decoration: none;
+
+}
+
+
+

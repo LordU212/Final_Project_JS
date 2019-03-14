@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body{
+        background: rgb(78, 76, 73);
+        text-align: center;
+        color: rgb(182, 97, 97);
+    }
+section{
+  display:flex;
+  flex-wrap:wrap;
+  border:rgb(105, 60, 52) .2em solid;
+}
+p{
+	flex:1;
+    font-size: 1.5em;
+    align-self: auto;
+    color: white;
+}
+#controls{
+    text-align:center;
+    position: fixed;
+    
+}
+
+</style>
+
+<title>Creating a Draggable Element</title>
+</head>
+
+<body>
+
+   <h1>Space Carrier</h1>
+   <p>Navigate through obstacles with your spaceship, using controls to direct it. If you hit an obstacle, it's game over and you have to restart. </p>
+
+   <section>
+       <p><img id="asteroid1" src="media/asteroid.png"></p>
+       <p><img id="spaceship" src="media/spaceship.png"></p>
+       <p><img id="asteroid2" src="media/asteroid2.png"></p>
+
+       <p id="controls">
+            <button id="left">Move the Spaceship left</button>
+            <button id="right">Move the Spaceship right</button>
+            <button id="down">Move the Spaceship down</button>
+            <button id="up">Move the Spaceship up </button>
+            </p>
+       <script>
+            var id;
+            var posX=0;
+            var posY=0;
+            var elem = document.getElementById("spaceship"); 
+            
+            document.getElementById("down").addEventListener("click",function() {
+              var id = setInterval(frame, 5);
+              posY=elem.y;
+              posX=elem.x; 
+              function frame() {
+                document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+                if (posY>=450) {
+                  clearInterval(id);
+                } else {
+                  posY++; 
+                  elem.style.top = posY + 'px'; 
+                  document.getElementById("xCoord").value=elem.x;
+                  document.getElementById("yCoord").value=elem.y;
+                }
+              }
+            });
+            
+            document.getElementById("up").addEventListener("click",function() {
+              var id = setInterval(frame, 5);
+              posY=elem.y;
+              posX=elem.x; 
+              function frame() {
+                document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+                if (posY <= 50) {
+                  clearInterval(id);
+                } else {
+                  posY--; 
+                  elem.style.top = posY + 'px'; 
+                  document.getElementById("xCoord").value=elem.x;
+                  document.getElementById("yCoord").value=elem.y;
+                }
+              }
+            });
+            
+            document.getElementById("right").addEventListener("click",function() {
+              posY=elem.y;
+              posX=elem.x; 
+              var id = setInterval(frame, 5);
+              function frame() {
+                document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+                if (posX >= 1250) {
+                  clearInterval(id);
+                } else {
+                  posX++;
+                  elem.style.left = posX + 'px'; 
+                  document.getElementById("xCoord").value=elem.x;
+                  document.getElementById("yCoord").value=elem.y;
+                }
+              }
+            });
+            
+            document.getElementById("left").addEventListener("click",function() {
+              posY=elem.y;
+              posX=elem.x; 
+              var id = setInterval(frame, 5);
+              function frame() {
+                document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+                if (posX <= 50) {
+                  clearInterval(id);
+                } else {
+                  posX--;
+                  elem.style.left = posX + 'px'; 
+                  document.getElementById("xCoord").value=elem.x;
+                  document.getElementById("yCoord").value=elem.y;
+                }
+              }
+            });
+            
+            
+            </script>
+   </section>
+</body>
+</html>

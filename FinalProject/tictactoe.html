@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body{
+        background: rgb(70, 241, 233);
+        text-align: center;
+    }
+section{
+  display:flex;
+  flex-wrap:wrap;
+  border:rgb(105, 60, 52) .2em solid;
+}
+p{
+	flex:1;
+    font-size: 1.5em;
+    align-self: auto;
+    
+}
+
+</style>
+   <script src="https://code.jquery.com/jquery-latest.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><script>
+      $(function()
+        {
+            $("#MoveMe1").draggable();
+            $("#MoveMe2").draggable();
+            $("#MoveMe3").draggable();
+            $("#MoveMe4").draggable();
+            $("#MoveMe5").draggable();
+            $("#MoveMe6").draggable();
+            $("#MoveMe7").draggable();
+            $("#MoveMe8").draggable();     
+            $("#MoveMe9").draggable();   
+            $("#MoveMe10").draggable();   
+            $("#MoveMe11").draggable();
+            
+        });
+</script>
+<title>Creating a Draggable Element</title>
+</head>
+
+<body>
+
+   <h1>Tic-Tac-Toe</h1>
+   <p>This game is Tic-Tac-Toe, a 2 player game where each player takes turns placing their symbol on the game board. The goal is to get three of their own symbols in a row.</p>
+
+   <section>
+       <p id="MoveMe11"><img src="media/lettero1.png" /></p>          
+   <p id="MoveMe2"><img src="media/lettero2.png" /></p>
+   <p id="MoveMe3"><img src="media/lettero3.png" /></p>
+   <p id="MoveMe4"><img src="media/lettero4.png" /></p>
+   <p id="MoveMe5"><img src="media/lettero5.png" /></p>
+   <p id="board"><img src="media/tictactoebox.png" /></p>
+   
+   <p id="MoveMe6"><img src="media/letterx1.png" /></p> 
+   <p id="MoveMe7"><img src="media/letterx2.png" /></p> 
+   <p id="MoveMe8"><img src="media/letterx3.png" /></p> 
+   <p id="MoveMe9"><img src="media/letterx4.png" /></p> 
+   <p id="MoveMe10"><img src="media/letterx5.png" /></p> 
+   </section>
+</body>
+</html>

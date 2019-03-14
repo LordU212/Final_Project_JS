@@ -1,0 +1,145 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /*  use em for size or another relative measurement */
+    font-size: 16pt;
+    background-image: url(../media/background.jpg);
+    /* size should be should be cover or contain */
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+footer, header{
+    background: rgb(6, 1, 17);
+   /* opacity is optional - if you have a background photo, it will allow the photo to show through the color */
+    opacity: 80%;
+    width: 100%;
+}
+article{
+   /* use the settings shown below */
+    display: flex;
+    flex-direction:column;
+    height:700px;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+section{
+    flex:1;
+    background: rgb(6, 1, 17);
+    /*  use % for padding, height and width */
+    padding: 2%;
+    min-width: 2%;
+    max-width:100%;
+    min-height: 40%;
+   /* opacity is optional - if you have a background photo, it will allow the photo to show through the color */
+    opacity: .83;
+}
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   /*  use em for size or another relative measurement */
+    font-size: 22pt;
+    color: blue;
+    text-shadow: 2pt;
+    text-align: center;
+}
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(71, 8, 187);
+   /*  use em for size or another relative measurement */
+    font-size: 30pt;
+    text-shadow: 1pt;
+    /*  use % for width */
+    width: 10%;
+    background-color: none;
+    /* can use pixels for padding */
+    padding: .5%;
+   /* opacity is optional - if you have a background photo, it will allow the photo to show through the color */
+    opacity: none;
+    /*  border-radius should be pixels */
+    border-radius: 2px;
+}
+
+nav ul {
+   
+   
+    color: rgb(17, 3, 43);
+    /* font-weight can be whatever you want */
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.15);
+	padding: 0 10px;
+	border-radius: 2px;  
+	list-style: none;
+	
+	font-weight:900;
+	width:80%;
+
+}
+
+
+
+
+nav ul li {
+    
+    float: left;
+    color: blue;
+    position: relative;
+    min-width: 8em;
+}
+nav ul li:hover {
+
+    color: purple;
+    /*  font-size should be a relative measurement */
+    font-size: 16pt;
+    border-radius: 1%;
+
+}
+nav ul li a {
+    position: relative;
+	padding: 15px 20px;
+    color: rgb(39, 83, 109);
+    text-shadow: 2pt;
+    text-decoration: none;
+
+}
+nav ul li:hover a {
+    color: rgb(10, 175, 161);
+    text-decoration: none;
+
+}
+nav ul li:hover > ul {
+    display:flex;
+	flex-direction:column;
+	width:30%;
+}
+#menu a{
+    position: absolute;
+}
+nav ul ul {
+    display: none;
+	border-radius: 0px; 
+	padding: 0;
+    
+	z-index:10;
+
+    border:2px solid black;
+
+    font-size: 16pt;
+}
+
+nav ul ul li {
+    display: block;
+	border-top: 1px solid #3a3030;
+	border-bottom: 1px solid #3a3030; 
+	position: relative;
+    text-align: center;
+    
+}
+nav ul ul li a {
+    padding: 15px;
+    color:black;
+}      
+
+nav ul ul li a:hover {
+    /*background:*/ 
+    color: rgb(137, 70, 139); 
+    display: block;
+}
+
+
